@@ -10,9 +10,7 @@ Any file you put in `/gmod-volume` will override the files in `/gmod-base`, and 
 You can also create a `start-server.sh` in the volume to customize what happens when the server is started (for instance, you may want to automatically update it, or use a more sophisticated crash detection system).
 
 #### Notes/Todo
-Everything *appears* to be working right now, but I'm having trouble connecting to the server after it's started. I'm not sure if the Source Engine uses more ports than its documented 27015 for inbound connections (I didn't think it did?)
-
-Also, right now the container needs to be run with `--privileged=true` for fuse to work, but this gives more permissions to the container than are necessary. I should figure out which options are actually needed and use docker's `-o` switch instead.
+Right now the container needs to be run with `--privileged=true` for fuse to work, but this gives more permissions to the container than are necessary. I should figure out which options are actually needed and use docker's `-o` switch instead.
 
 I might also rewrite this in the future to be a game-agnostic Source Engine server container, with facilitation for mounting content. But first I want to get this implementation working.
 
