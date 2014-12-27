@@ -44,9 +44,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y install unionfs-fuse
 # Setup Container
 # ---------------
 
-ADD prepare-server.sh /prepare-server.sh
-ADD start-server.sh /gmod-base/start-server.sh
+ADD start-server.sh /start-server.sh
 EXPOSE 27015
 
-CMD ["/bin/sh", "/prepare-server.sh"]
+CMD ["/bin/sh", "/start-server.sh"]
 #CMD ["/bin/sh"]
