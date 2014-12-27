@@ -45,7 +45,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y install unionfs-fuse
 # ---------------
 
 ADD start-server.sh /start-server.sh
-EXPOSE 27015
+EXPOSE 27015/udp
 
 CMD ["/bin/sh", "/start-server.sh"]
 #CMD ["/bin/sh"]
