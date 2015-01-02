@@ -10,7 +10,7 @@ ENV COLLECTION_ID=collection_id
 ENV STEAM_WEB_KEY=steam_web_key
 ENV GAMEMODE=gamemode
 ENV MAP=map
-ENV HOSTNAME="hostname"
+ENV G_HOSTNAME="g_hostname"
 
 EXPOSE 27015/udp
 CMD ["/bin/sh", "/start-server.sh"]

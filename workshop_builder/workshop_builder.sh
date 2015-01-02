@@ -5,7 +5,7 @@ authkey=$3
 gamemode=$4
 map=$5
 
-hostname=$6
+g_hostname=$6
 outputname=$7
 
 workshop_requires=${@:8}
@@ -17,7 +17,7 @@ echo "collection id: $collection_id"
 echo "steam web api key: $authkey"
 echo "gamemode: $gamemode"
 echo "map: $map"
-echo "hostname: $hostname"
+echo "game hostname: $g_hostname"
 echo "outputname: $outputname"
 echo "workshop requires: $workshop_requires"
 echo "---"
@@ -27,7 +27,7 @@ sed "s/collection_id/$collection_id/g" Dockerfile.in > Dockerfile.in2
 sed "s/steam_web_key/$authkey/g" Dockerfile.in2 > Dockerfile.in3
 sed "s/gamemode/$gamemode/g" Dockerfile.in3 > Dockerfile.in4
 sed "s/map/$map/g" Dockerfile.in4 > Dockerfile.in5
-sed "s/hostname/$hostname/g" Dockerfile.in5 > Dockerfile
+sed "s/g_hostname/$g_hostname/g" Dockerfile.in5 > Dockerfile
 rm Dockerfile.in2 Dockerfile.in3 Dockerfile.in4 Dockerfile.in5
 
 # assemble workshop.lua
