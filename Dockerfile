@@ -1,4 +1,4 @@
-FROM debian
+FROM debian:jessie
 
 MAINTAINER Suchipi Izumi "me@suchipi.com"
 
