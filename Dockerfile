@@ -29,7 +29,7 @@ RUN cp /steamcmd/linux32/libstdc++.so.6 /gmod-base/bin/
 
 RUN mkdir /root/.steam
 RUN mkdir /root/.steam/sdk32/
-RUN cp /gmod-base/bin/libsteam.so /.steam/sdk32
+RUN cp /gmod-base/bin/libsteam.so /root/.steam/sdk32
 
 # ----------------------
 # Setup Volume and Union
