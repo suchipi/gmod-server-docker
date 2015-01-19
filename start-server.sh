@@ -6,7 +6,7 @@ if [[ -z "$NO_UNION" ]]; then
   done
 else
   while true; do
-    /gmod-base/srcds_run -game garrysmod +maxplayers ${MAXPLAYERS:=16} +hostname \"${G_HOSTNAME:="Miniserver"}\" +gamemode ${GAMEMODE:=sandbox} "${ARGS}" +map ${MAP:=gm_$
+    /gmod-base/srcds_run -game garrysmod +maxplayers ${MAXPLAYERS:=16} +hostname \"${G_HOSTNAME:="Miniserver"}\" +gamemode ${GAMEMODE:=sandbox} "${ARGS}" +map ${MAP:=gm_construct}
   done
 fi
 
