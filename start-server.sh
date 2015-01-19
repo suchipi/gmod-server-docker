@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 if [[ -z "$NO_UNION" ]]; then
   unionfs-fuse -o cow /gmod-volume=RW:/gmod-base=RO /gmod-union
   while true; do
