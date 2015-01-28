@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ -z "$NO_UNION" ]; then
+if [ -n "$UNION" ]; then
   unionfs-fuse -o cow /gmod-volume=RW:/gmod-base=RO /gmod-union
   while true; do
     echo running /gmod-union/srcds_run -game garrysmod -norestart -nomaster +maxplayers ${MAXPLAYERS:=16} +hostname \"${G_HOSTNAME:="Miniserver"}\" +gamemode ${GAMEMODE:=sandbox} "${ARGS}" +map ${MAP:=gm_construct}
