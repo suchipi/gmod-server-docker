@@ -47,5 +47,10 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y install unionfs-fuse
 ADD start-server.sh /start-server.sh
 EXPOSE 27015/udp
 
+ENV PORT="27015"
+ENV MAXPLAYERS="16"
+ENV G_HOSTNAME="Garry's Mod"
+ENV GAMEMODE="sandbox"
+ENV MAP="gm_construct"
+
 CMD ["/bin/sh", "/start-server.sh"]
-#CMD ["/bin/sh"]
