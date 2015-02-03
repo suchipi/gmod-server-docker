@@ -20,8 +20,8 @@ RUN /steamcmd/steamcmd.sh +login anonymous +force_install_dir /gmod-base +app_up
 
 RUN mkdir /gmod-libs
 WORKDIR /gmod-libs
-RUN wget http://security.ubuntu.com/ubuntu/pool/main/e/eglibc/libc6_2.15-0ubuntu10.9_i386.deb
-RUN dpkg -x libc6_2.15-0ubuntu10.9_i386.deb .
+RUN wget http://security.ubuntu.com/ubuntu/pool/main/e/eglibc/libc6_2.15-0ubuntu10.10_i386.deb
+RUN dpkg -x libc6_2.15-0ubuntu10.10_i386.deb .
 RUN cp lib/i386-linux-gnu/* /gmod-base/bin/
 WORKDIR /
 RUN rm -rf /gmod-libs
